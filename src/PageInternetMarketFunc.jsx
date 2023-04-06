@@ -1,16 +1,5 @@
-import { useState } from "react"
 import "./main.css"
 import PropTypes from "prop-types"
-
-const item = {
-	brand: "Tiger of Sweden",
-	title: "Leonard coat",
-	description: "Minimalistic coat in cotton-blend",
-	descriptionFull:
-		"Men's minimalistic overcoat in cotton-blend. Features a stand-up collar, concealed front closure and single back vent. Slim fit with clean, straight shape. Above-knee length.",
-	price: 399,
-	currency: "£"
-}
 
 function InfoPage({ item: { brand, title, description, descriptionFull, price, currency } }) {
 	return (
@@ -44,12 +33,11 @@ InfoPage.propTypes = {
 	})
 }
 
-function PageInternetMarket() {
+function PageInternetMarketFunc({ item }) {
 	return (
-		<div className="container">
-			<div className="background-element"></div>
-			<div className="highlight-window">
-				<div className="highlight-overlay"></div>
+		<div className="content">
+			<div className="highlight-blue">
+				<div className="highlight-black"></div>
 			</div>
 			<div className="window">
 				<InfoPage item={item} />
@@ -58,4 +46,4 @@ function PageInternetMarket() {
 	)
 }
 
-export default PageInternetMarket
+export default PageInternetMarketFunc

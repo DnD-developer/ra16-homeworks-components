@@ -13,6 +13,16 @@ h2,
 h3 {
 	margin: 0;
 }
+.content {
+	display: flex;
+	align-items: center;
+
+	margin-top: 30px;
+}
+
+.content:first-child {
+	margin-top: 0px;
+}
 
 .container {
 	display: -webkit-box;
@@ -28,6 +38,8 @@ h3 {
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	background: #999;
 }
 
@@ -88,7 +100,7 @@ h3 {
 	width: 100%;
 }
 
-.highlight-window {
+.highlight-blue {
 	height: 550px;
 	width: 400px;
 	background: #ccc;
@@ -108,7 +120,8 @@ h3 {
 	border: 1px solid #eee;
 	position: relative;
 }
-.highlight-overlay {
+
+.highlight-black {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -118,10 +131,14 @@ h3 {
 	filter: alpha(opacity=0);
 	background: url("../img/item-black.jpg");
 	background-size: cover;
-	-webkit-transition: opacity 0.4s ease;
 	transition: opacity 0.4s ease;
 	background-position: center top;
 }
+
+.highlight-black.active {
+	opacity: 1;
+}
+
 .background-element {
 	background: #457;
 	position: absolute;
